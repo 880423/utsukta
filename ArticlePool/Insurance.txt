@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-28T20:41:17+05:30
+
+====== Insurance ======
+Created Friday 28 June 2019
+
+
+
+References:
+https://www.irdai.gov.in/
+Annual Report	https://www.irdai.gov.in/ADMINCMS/cms/Uploadedfiles/english_hindi_annual%20report%202018%20webcopy.pdf

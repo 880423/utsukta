@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-19T19:39:19+05:30
+
+====== ArticlePool ======
+Created Saturday 19 January 2019
+
+==== Guidelines for writing ====
+* Frame Questions
+	* Frame Subquestions
+* Observe a phenomenon and then investigate the reasons behind the phenomenon
+	* Provide data and evidence for claims
+* Observe how it affects our society 
+* Conclude with major findings and proposals
+
+
+==== Pool ====
+
+Book Review 		(Sex)			[[+11Minutes]]	 
+Analysis			(Personality)		[[+Agency]] 
+Analysis			(Personality)		[[+Autonomy]] 
+Analysis			(Society)		[[+Change]] 
+Analysis			(Society)		[[+CloseTheMind]] 
+Analysis			(Society)		[[+RapeCulture]] 
+Knowledge		(Lifestyle)		[[+Insurance]] 
+Media			(Issues)			[[+Media]] 
+
+In Light of...		(News)			[[+News]] 
+In the Age of AI	(Media)			[[+AI]] 

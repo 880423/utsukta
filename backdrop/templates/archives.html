@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}All Articles{% endblock title %}
+
+{% block content %}
+{% import 'macros.html' as macros %}
+<div class="row">
+    <div class="small-12 columns">
+        <h2>Archives</h2><hr>
+        {% if articles %}
+        <ul class="inline-center">
+            {% for year, year_articles in articles|groupby('date.year')|sort(reverse=True) %}
+            <h4><li><a href="{{ SITEURL }}/archives/{{ year }}/">{{ year }}</a></li></h4><br>
+            
+                {% for month, month_articles in year_articles|groupby('date.month')|sort(reverse=False) %}
+                <li><a href="{{ SITEURL }}/archives/{{ year }}/{{ month_articles[0].date.strftime('%B') }}/">{{ month_articles[0].date.strftime('%B') }} </a></li>
+                {% endfor %}<br>
+            
+            <hr>
+            {% endfor %}
+        </ul>
+        {% endif %} 
+    
+    </div>
+</div>
+{% endblock content %}

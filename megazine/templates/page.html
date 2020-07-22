@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+	{% block head %}
+	
+	{% endblock %}
+
+	{% block content %}
+			<div class="colorlib-blog">
+				<div class="container-wrap">
+					<div class="row">
+						<div class="col-md-9">
+							<div class="content-wrap">
+								<article class="animate-box">
+									<div class="blog-img" style="background-image: url({{ SITEURL }}/images/{{ page.img }});"></div>
+									<div class="desc">
+										<div class="meta">
+											<p>
+											</p>
+										</div>
+										<h2><a href="single.html">{{ page.title }}</a></h2>
+										{{ page.content }}
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="col-md-3 sticky-parent">
+							{% include "sidebar.html" %}
+						</div>
+					</div>
+				</div>
+			</div>
+	{% endblock %}

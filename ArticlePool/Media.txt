@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-07-08T17:21:39+05:30
+
+====== Media ======
+Created Monday 08 July 2019
+
+
+When the quest for attention goes wild.
+
+RepublicTV
+{{./pasted_image.png?width=500}}
+https://www.republicworld.com/livetv
+
+NDTV24x7
+{{./pasted_image001.png?width=500}}
+https://www.youtube.com/watch?v=Vu7iV-OaWF4
+
+{{./pasted_image002.png?width=500}}
+https://www.youtube.com/watch?v=pZoilXWHKUk
+
+{{./pasted_image003.png?width=500}}{{./pasted_image005.png}}
+https://www.youtube.com/watch?v=onlDh-xwKfE
+

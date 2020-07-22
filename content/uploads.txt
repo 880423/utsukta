@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-21T02:14:50+05:30
+
+====== uploads ======
+Created Monday 21 January 2019
+
+[[./SchoolOfThought_BiasesPoster_A3.pdf]]
+[[./SchoolOfThought_FallaciesPoster_A3.pdf]]
+

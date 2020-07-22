@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+	{% block head %}
+	
+	{% endblock %}
+
+	{% block content %}
+
+			<div class="colorlib-blog">
+				<div class="container-wrap">
+					<div class="row">
+						<div class="col-md-9">
+							<div class="content-wrap">
+								{% for article in articles %}
+								<article class="blog-entry-travel animate-box">
+									<div class="blog-img" style="background-image: url({{ SITEURL }}/images/{{ article.img }});"></div>
+									<div class="desc">
+										<p class="meta">
+											<span class="cat"><a href="#">Stylde</a></span>
+											<span class="date">25 May 2018</span>
+											<span class="pos">By <a href="#">Walter</a></span>
+										</p>
+										<h2><a href="single.html">Nature lover</a></h2>
+										<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+										<p><a href="single.html" class="btn btn-primary with-arrow">Read More <i class="icon-arrow-right22"></i></a></p>
+									</div>
+								</article>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="col-md-3">
+						{% include "sidebar.html" %}
+						</div>
+					</div>
+				</div>
+			</div>
+	{% endblock %}

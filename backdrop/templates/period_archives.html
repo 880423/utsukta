@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Archives{% endblock title %}
+
+{% block content %}
+<div class="row">
+    <div class="small-12 columns">
+        <h2>Archives for {{ period | reverse | join(' ') }}</h2><hr>
+        <dl>
+        
+            {% for month, month_articles in dates|groupby('date.month')|sort(reverse=True) %}
+            <h4>{{ month_articles[0].date.strftime('%B') }}</h4><br>
+            {% for day, day_articles in month_articles|groupby('date.day')|sort(reverse=True) %}
+            <ul class="no-bullet">
+
+                    {% for article in day_articles %}
+
+                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+                    <small><em>{{ article.locale_date }}</em></small>
+
+                    {% endfor %}
+            </ul>
+            {% endfor %}<hr>
+            {% endfor %}
+        
+        </dl>
+    </div>
+</div>
+{% endblock %}
