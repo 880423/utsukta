@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://utsukta.org/</loc>
-<lastmod>2020-07-01T16:44:30-00:00</lastmod>
+<lastmod>2020-07-23T04:08:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://utsukta.org/categories.html</loc>
-<lastmod>2020-07-01T16:44:30-00:00</lastmod>
+<lastmod>2020-07-23T04:08:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://utsukta.org/about-contact/</loc>
-<lastmod>2020-07-01T16:44:30-00:00</lastmod>
+<loc>https://utsukta.org/about/</loc>
+<lastmod>2020-07-23T04:08:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://utsukta.org/search/</loc>
-<lastmod>2020-07-01T16:44:30-00:00</lastmod>
+<lastmod>2020-07-23T04:08:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

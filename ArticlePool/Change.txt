@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-06-12T07:47:44+05:30
-
-====== Change ======
-Created Wednesday 12 June 2019
-
-Change takes time sometimes a generation or two.
