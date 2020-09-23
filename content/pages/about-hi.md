@@ -1,4 +1,4 @@
-Title: संपर्क एवं बारे में
+Title: About
 img: backdrop.jpg
 lang: hi
 

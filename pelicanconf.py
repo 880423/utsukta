@@ -13,15 +13,15 @@ DONATE_IMAGE = '/uploads/donate.png'
 BACKDROP_IMAGE = '/uploads/backdrop.jpg'
 
 PATH = 'content'
-SITE_DESCRIPTION = '\'Utsukta\' is a blog where we publish works motivated by the pursuit of truth.'
+SITE_DESCRIPTION = '\'Utsukta\' is a blog where we publish works motivated by the pursuit of freedom through the search for truth.'
 TIMEZONE = 'Asia/Calcutta'
 DONATE = 'If you appreciate the efforts of our team, you can <a href="upi://pay?pa=utsukta@sbi&pn=Utsukta&mc=0000&tn=Pay%to%Utsukta&cu=INR" >buy</a> us a coffee.'
 DONATEURL = 'upi://pay?pa=utsukta@sbi&pn=Utsukta&mc=0000&tn=Pay%to%Utsukta&cu=INR'
 DEFAULT_LANG = 'en'
 
-THEME = 'megazine'
+THEME = 'utsukta'
 THEME_STATIC_DIR = ''
-#BOOT = 'journal'
+BOOTSWATCH = 'lux'
 # Feed generation is usually not desired when developing
 
 DISPLAY_CAT_ON_MENU = True
@@ -56,7 +56,16 @@ YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%B}/index.html'
 
 # Plugins
-PLUGINS = ['sitemap', 'i18n_subsites','category_meta']
+PLUGINS = ['sitemap', 'series','category_meta','thumbnailer','representative_image','summary', 'clean_summary','toc',]
+
+## Clean Summary
+
+
+## THUMBNAILER
+IMAGE_PATH = 'images'
+THUMBNAIL_DIR = 'images/th'
+THUMBNAIL_SIZES = {'lg':'400x400','sm':'200x200'}
+
 
 SITEMAP = {
     'format': 'xml',
@@ -76,7 +85,7 @@ I18N_SUBSITES = {
     'hi': {
         'SITENAME': ' उत्सुकता ' ,
         'THEME_STATIC_DIR': '',
-        'THEME': 'megazine_hi',
+        'THEME': 'utsukta_hi',
         'STATIC_PATHS': ['uploads', 'images'],
         'SITESUBTITLE': 'जिज्ञासा बनाए रखें। ',
         'AUTHOR': 'उत्सुकता ',
@@ -90,6 +99,17 @@ DATE_FORMATS = {
     'hi': ('hi_IN.utf8','%a, %d %b %Y'),
 }
 
+TOC = {
+    'TOC_HEADERS'       : '^h[1-6]', # What headers should be included in
+                                     # the generated toc
+                                     # Expected format is a regular expression
+
+    'TOC_RUN'           : 'true',    # Default value for toc generation,
+                                     # if it does not evaluate
+                                     # to 'true' no toc will be generated
+
+    'TOC_INCLUDE_TITLE': 'true',     # If 'true' include title in toc
+}
 
 # Blogroll
 LINKS = (('Utsukta Blog','https://blog.utsukta.org'),)
