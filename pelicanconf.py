@@ -56,7 +56,11 @@ YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%B}/index.html'
 
 # Plugins
+<<<<<<< HEAD
 PLUGINS = ['sitemap', 'series','category_meta','thumbnailer','representative_image','summary', 'clean_summary']
+=======
+PLUGINS = ['sitemap', 'series','category_meta','thumbnailer','representative_image','summary', 'clean_summary',]
+>>>>>>> 59ddfbebdb2861edbf27a6e072cf303f1b9df11f
 
 ## Clean Summary
 
@@ -99,17 +103,6 @@ DATE_FORMATS = {
     'hi': ('hi_IN.utf8','%a, %d %b %Y'),
 }
 
-TOC = {
-    'TOC_HEADERS'       : '^h[1-6]', # What headers should be included in
-                                     # the generated toc
-                                     # Expected format is a regular expression
-
-    'TOC_RUN'           : 'true',    # Default value for toc generation,
-                                     # if it does not evaluate
-                                     # to 'true' no toc will be generated
-
-    'TOC_INCLUDE_TITLE': 'true',     # If 'true' include title in toc
-}
 
 # Blogroll
 LINKS = (('Utsukta Blog','https://blog.utsukta.org'),)
