@@ -56,7 +56,7 @@ YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%B}/index.html'
 
 # Plugins
-PLUGINS = ['sitemap', 'series','category_meta','thumbnailer','representative_image','summary', 'clean_summary','toc',]
+PLUGINS = ['sitemap', 'series','category_meta','thumbnailer','representative_image','summary', 'clean_summary']
 
 ## Clean Summary
 
