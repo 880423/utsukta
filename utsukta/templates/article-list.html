@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+    {% block content %}
+                {% for a in articles %}  
+                {% if loop.index % 2 == 1 %}
+                <div class="row align-items-center my-5 card-body">
+                  <!-- /.col-lg-8 -->
+                  <div class="col-lg-8">
+                      <h1 class="font-weight-light">{{ a.title }}</h1>
+                    <p>{{ a.summary }}</p>
+                    <a class="btn btn-primary" href="{{ SITEURL }}/{{ a.url }}">Read more...</a>
+                  </div>
+                  <!-- /.col-md-4 -->
+                   <div class="col-lg-4">
+                      <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ SITEURL }}/{{ a.featured_image  }}" alt="">
+                  </div>
+                </div>
+                {% endif %}
+            
+                {% if loop.index % 2 == 0 %}
+                <div class="row align-items-center my-5 card-body">
+                  <div class="col-lg-4">
+                      <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ SITEURL }}/{{ a.featured_image  }}" alt="">
+                  </div>
+                  <!-- /.col-lg-8 -->
+                  <div class="col-lg-8">
+                      <h1 class="font-weight-light">{{ a.title }}</h1>
+                    <p>{{ a.summary }}</p>
+                    <a class="btn btn-primary" href="{{ SITEURL }}/{{ a.url }}">Read more...</a>
+                  </div>
+                  <!-- /.col-md-4 -->
+                </div>
+                {% endif %}
+
+                {% endfor %}
+
+    {% endblock %}
+
+    {% block sidebar %}
+
+    {% endblock %}
