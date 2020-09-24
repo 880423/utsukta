@@ -2,9 +2,8 @@
 
 	{% block content %}
         {% for cat,articles in categories %}
-            {% if loop.index == 1 %}
                 {% for a in articles if a.type =='editorial' %}  
-                    <div class="col-lg-12">
+                    <div class="row align-items-center my-5 card-body">
                         <div class="card border-light"> 
                           <div class="card-body">
                               <h1 class="card-title">{{ a.title }}</h1><hr>
@@ -14,7 +13,8 @@
                     </div>
                 {% endfor %}
             
-                {% for a in articles if a.type =='feature' %}  
+                {% for a in articles if a.type !='editorial' %}  
+                {% if loop.index % 2 == 1 %}
                 <div class="row align-items-center my-5 card-body">
                   <!-- /.col-lg-8 -->
                   <div class="col-lg-8">
@@ -27,9 +27,9 @@
                       <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ SITEURL }}/{{ a.featured_image  }}" alt="">
                   </div>
                 </div>
-                {% endfor %}
+                {% endif %}
             
-                {% for a in articles if a.type =='book' %}  
+                {% if loop.index % 2 == 0 %}
                 <div class="row align-items-center my-5 card-body">
                   <div class="col-lg-4">
                       <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ SITEURL }}/{{ a.featured_image  }}" alt="">
@@ -42,55 +42,11 @@
                   </div>
                   <!-- /.col-md-4 -->
                 </div>
-                {% endfor %}
-            
-                {% for a in articles if a.type =='art' %}  
-                <div class="row align-items-center my-5 card-body">
-                  <!-- /.col-lg-8 -->
-                  <div class="col-lg-8">
-                      <h1 class="font-weight-light">{{ a.title }}</h1>
-                    <p>{{ a.summary }}</p>
-                    <a class="btn btn-primary" href="{{ SITEURL }}/{{ a.url }}">Read more...</a>
-                  </div>
-                  <!-- /.col-md-4 -->
-                    <div class="col-lg-4">
-                      <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ SITEURL }}/{{ a.featured_image  }}" alt="">
-                </div>
-                {% endfor %}
+                {% endif %}
 
-                {% for a in articles if a.type =='cinema' %}  
-                <div class="row align-items-center my-5 card-body">
-                  <div class="col-lg-4">
-                      <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ SITEURL }}/{{ a.featured_image  }}" alt="">
-                  </div>
-                  <!-- /.col-lg-8 -->
-                  <div class="col-lg-8">
-                      <h1 class="font-weight-light">{{ a.title }}</h1>
-                    <p>{{ a.summary }}</p>
-                    <a class="btn btn-primary" href="{{ SITEURL }}/{{ a.url }}">Read more...</a>
-                  </div>
-                  <!-- /.col-md-4 -->
-                </div>
                 {% endfor %}
             
-                {% for a in articles if a.type =='workshop' %}  
-                <div class="row align-items-center my-5 card-body">
-                  <!-- /.col-lg-8 -->
-                  <div class="col-lg-8">
-                      <h1 class="font-weight-light">{{ a.title }}</h1>
-                    <p>{{ a.summary }}</p>
-                    <a class="btn btn-primary" href="{{ SITEURL }}/{{ a.url }}">Read more...</a>
-                  </div>
-                  <!-- /.col-md-4 -->
-                    <div class="col-lg-4">
-                      <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ SITEURL }}/{{ a.featured_image  }}" alt="">
-                  </div>
-                </div>
-                {% endfor %}
-    
-            {% endif %}
         {% endfor %}
-                </div>
 	{% endblock %}
 
 {% block sidebar %}
