@@ -2,7 +2,8 @@
 
 	{% block content %}
 
-<div class="col-lg-12">
+    
+        <div class="col-sm-9 col-md-9">
 
         <!-- Title -->
         <h1 class="mt-4">{{ article.title }}</h1>
@@ -10,13 +11,20 @@
         <!-- Author -->
         <p class="lead">
           by
-          <a href="#">{{ article.author }}</a>
-        </p>
-
+          <a href="#">{{ article.author }}</a> 
+    
+            </p>
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on {{ article.locale_date }}</p>
+        <p>Posted on {{ article.locale_date }} 
+        {% if article.translations %}
+               | Translations: 
+                {% for translation in article.translations %}
+                    <a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
+                {% endfor %}
+            {% endif %}
+</p>
 
         <hr>
 
@@ -29,12 +37,12 @@
         {{ article.content }}
         <hr>
 
-       <div class="card card-outline-secondary my-4">
+        <div class="card card-outline-secondary my-4">
           <div class="card-header">
             Comments
           </div>
           <div class="card-body">
-         <div id="disqus_thread"></div>
+          <div id="disqus_thread"></div>
 
 
          <script>
@@ -59,39 +67,41 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
           </div>
         </div>
         <!-- /.card -->
-</div>
-	{% endblock %}
+        </div>
+        <div class="col-sm-3">
+            <br>
+            <nav id="toc" class="affix" data-spy="affix" data-toggle="toc" style="position:fixed;"></nav>
+        </div>
+
+        {% endblock %}
 
 {% block sidebar %}
-{% if article.toc %}
-<div class="col-lg-12 hidden-xs hidden-sm">
-    <br>
-    <h4>Outline</h4>
-    {{article.toc}}
-    <hr>
-</div>
-{% endif %}
-{% if article.series %}
-<br>
-<p>This article is part {{ article.series.index }} of the "{{ article.series.name }}" series:</p>
-    <ol class="parts">
-        {% for part_article in article.series.all %}
-            <li {% if part_article == article %}class="active"{% endif %}>
-                <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
-            </li>
-        {% endfor %}
-    </ol>
-    <hr>
-{% endif %}
+
+        {% if article.series %}
+        <br>
+        <p class="lead">This article is part {{ article.series.index }} of the "{{ article.series.name }}" series:</p>
+            <ol class="parts">
+                {% for part_article in article.series.all %}
+                    <li {% if part_article == article %}class="active"{% endif %}>
+                        <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                    </li>
+                {% endfor %}
+            </ol>
+            <hr>
+        {% endif %}
 
         {% for cat,articles in categories %}
             {% if loop.index == 1 %}
-            <br>
-            <p class="lead">In this Issue</p>
-                {% for a in articles %}
-                <a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a><br>
-                {% endfor %}
+                <div class="card border-light mb-3">
+                  <div class="card-header">In Current Issue</div>
+                    <div class="card-body">
+                         <ul class="list-group list-group-flush">
+                          {% for a in articles %}
+                            <li class="list-group-item"><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
+                          {% endfor %}
+                         </ul>
+                    </div>
+                 </div>
             {% endif %}
         {% endfor %}
-
 {% endblock %}
