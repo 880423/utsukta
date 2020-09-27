@@ -1,3 +1,11 @@
 Media
-
+*.pyc
 output
+*.txt
+drafts
+boot4blog*
+backdrop*
+Merch
+megazine*
+syllabus*
+
