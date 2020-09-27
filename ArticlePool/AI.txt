@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-11-08T04:11:22+05:30
-
-====== AI ======
-Created Friday 08 November 2019
-
-https://www.pbs.org/video/in-the-age-of-ai-zwfwzb/
