@@ -50,16 +50,14 @@
 {% block sidebar %}
          {% for cat,articles in categories %}
             {% if loop.index == 1 %}
-                <div class="card border-light mb-3">
-                  <div class="card-header">In Current Issue</div>
-                    <div class="card-body">
-                         <ul class="list-group list-group-flush">
-                          {% for a in articles %}
-                            <li class="list-group-item"><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
-                          {% endfor %}
-                         </ul>
-                    </div>
-                 </div>
+        <div class="card mb-3">
+            <div class="card-header">In Current Issue</div>
+              <ul class="list-group list-group-flush">
+              {% for a in articles %}
+               <li class="list-group-item"><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
+              {% endfor %}
+              </ul>
+        </div>
             {% endif %}
         {% endfor %}
  {% endblock %}
