@@ -21,7 +21,7 @@ DEFAULT_LANG = 'en'
 
 THEME = 'utsukta'
 THEME_STATIC_DIR = ''
-BOOTSWATCH = 'lux'
+BOOTSWATCH = 'materia'
 # Feed generation is usually not desired when developing
 
 DISPLAY_CAT_ON_MENU = True
