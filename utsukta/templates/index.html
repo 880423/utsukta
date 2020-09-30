@@ -4,11 +4,9 @@
         {% for cat,articles in categories %}
                 {% for a in articles if a.type =='editorial' %}  
                     <div class="row align-items-center my-5 card-body">
-                        <div class="card border-light"> 
-                          <div class="card-body">
-                              <h1 class="card-title">{{ a.title }}</h1><hr>
-                            <p class="card-text">{{ a.content }}</p>
-                          </div>
+                        <div class="col-lg-12">
+                          <h1 class="font-weight-light">{{ a.title }}</h1>
+                            <p>{{ a.content }}</p>
                         </div>
                     </div>
                 {% endfor %}
