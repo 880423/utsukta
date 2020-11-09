@@ -6,7 +6,7 @@ AUTHOR = 'Utsukta'
 EMAIL = 'contact@utsukta.org'
 SITENAME = 'Utsukta '
 SITEURL = ''
-SITESUBTITLE = 'Stay Curious.'
+SITESUBTITLE = 'In pursuit of the truth.'
 
 PROFILE_IMAGE =  '/uploads/logo.png'
 DONATE_IMAGE = '/uploads/donate.png'
@@ -21,7 +21,7 @@ DEFAULT_LANG = 'en'
 
 THEME = 'utsukta'
 THEME_STATIC_DIR = ''
-BOOTSWATCH = 'materia'
+BOOTSWATCH = 'journal'
 # Feed generation is usually not desired when developing
 
 DISPLAY_CAT_ON_MENU = True
@@ -38,8 +38,8 @@ RSS_FEED_SUMMARY_ONLY = True
 # Save Paths
 #ARTICLE_PATHS = ['articles']
 USE_FOLDER_AS_CATEGORY = True
-ARTICLE_URL = '{category}/{slug}/'
-ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
+ARTICLE_URL = '{slug}/'
+ARTICLE_SAVE_AS = '{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 TAG_URL = 'tags/{slug}/'
@@ -47,7 +47,8 @@ TAG_SAVE_AS = 'tags/{slug}/index.html'
 TAGS_URL = 'tags.html'
 DRAFT_URL = 'drafts/index.html'
 DRAFT_SAVE_AS = 'drafts/{slug}.html'
-
+AUTHOR_URL = 'authors/{slug}.html'
+AUTHOR_SAVE_AS = 'authors/{slug}.html'
 
 ARCHIVES_SAVE_AS = 'archives/index.html'
 ARCHIVES_URL = 'archives'
@@ -56,7 +57,7 @@ YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%B}/index.html'
 
 # Plugins
-PLUGINS = ['sitemap', 'series','category_meta','thumbnailer','representative_image','summary',]
+PLUGINS = ['sitemap', 'series','more_categories','thumbnailer','representative_image','summary',]
 
 ## Clean Summary
 SUMMARY_USE_FIRST_PARAGRAPH = True
@@ -116,6 +117,6 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 CC_LICENSE = 'CC-BY-NC-SA'
 
 DEFAULT_PAGINATION = 8
-PAGINATED_DIRECT_TEMPLATES = ('categories', 'archives','category', 'index')
+PAGINATED_DIRECT_TEMPLATES = ('categories', 'archives','category', 'index','author')
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

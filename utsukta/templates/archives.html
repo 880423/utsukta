@@ -1,4 +1,32 @@
-{% extends "article-list.html" %}
+{% extends "base.html" %}
+
+	{% block content %}
+                 <div class="jumbotron col-lg-12">
+                  <div class="container">
+                      <h1 class="display-4">Archives</h1>
+
+       {% for cat,articles in categories %}
+            {% if not cat.parent %}
+                <div class="row align-items-center card-body">
+                    <dt class="col-sm-3"><h1 class="font-weight-light"></h1></dt>
+                            <dd class="col-sm-9">
+                                <ul class="list-group list-group-flush">
+                                    <li class="text-uppercase list-group-item list-group-item-primary"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                                  {% for a in articles if a.category.shortname !='editorial' %}
+                                  <li class="list-group-item"><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
+                                  {% endfor %}
+                                </ul>
+                            </dd>
+                </div>
+            {% endif %}    
+        {% endfor %}
+    </div>
+                 </div>
+        {% endblock %}
+
+{% block sidebar %}
+ 
+{% endblock %}
 
 
 

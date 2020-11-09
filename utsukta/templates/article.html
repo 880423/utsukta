@@ -10,16 +10,12 @@
 
         <!-- Author -->
         <p class="lead">
-          by
-          <a href="#">{{ article.author }}</a> 
+        <a href="{{ SITEURL }}/{{ article.category.url }}"><span class="badge badge-secondary text-uppercase"><em>{{ article.category.shortname }}</em></span></a> Posted on {{ article.locale_date }}, by
+          <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a> 
     
-            </p>
-        <hr>
-
         <!-- Date/Time -->
-        <p>Posted on {{ article.locale_date }} 
-        {% if article.translations %}
-               | Translations: 
+                {% if article.translations %}
+              | Translations: 
                 {% for translation in article.translations %}
                     <a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
                 {% endfor %}

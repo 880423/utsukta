@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
-	{% block content %}
-        {% for cat,articles in categories %}
-            {% if loop.index == 1 %}
+{% block content %}
                 {% for a in articles if a.category.shortname =='editorial' %}
                 <div class="jumbotron col-lg-12">
                   <div class="container">
@@ -45,21 +43,5 @@
                 {% endif %}
 
                 {% endfor %}
-            {% endif %}    
-        {% endfor %}
-	{% endblock %}
 
-{% block sidebar %}
-         {% for cat,articles in categories %}
-            {% if loop.index == 1 %}
-        <div class="card mb-3">
-            <div class="card-header">In Current Issue</div>
-              <ul class="list-group list-group-flush">
-              {% for a in articles %}
-               <li class="list-group-item"><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
-              {% endfor %}
-              </ul>
-        </div>
-            {% endif %}
-        {% endfor %}
- {% endblock %}
+{% endblock %}

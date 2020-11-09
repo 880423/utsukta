@@ -45,6 +45,8 @@
 
 	<!-- Menu -->
       <div class="list-group list-group-flush">
+          <a href="{{ SITEURL }}/" class="list-group-item list-group-item-action bg-light lead"><h3>
+                  {{ SITENAME }}<br><small class="text-muted">{{ SITESUBTITLE }}</small></h3></a>
         {% for p in pages %}
         <a href="{{ SITEURL }}/{{ p.url }}" class="list-group-item list-group-item-action bg-light ">{{ p.title }}</a>
         {% endfor %}
